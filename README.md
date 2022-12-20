@@ -1,7 +1,7 @@
 # Prompt Extend
 [![Generic badge](https://img.shields.io/badge/🤗-Open%20in%20Spaces-blue.svg)](https://huggingface.co/spaces/daspartho/prompt-extend)
 
-Extending stable diffusion prompts with suitable style cues using text generation.
+Text generation model for generating suitable style cues given the main idea for a prompt.
 
 Play with it on [HuggingFace Space](https://huggingface.co/spaces/daspartho/prompt-extend). 
 
