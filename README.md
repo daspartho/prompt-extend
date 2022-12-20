@@ -7,6 +7,26 @@ Play with it on [HuggingFace Space](https://huggingface.co/spaces/daspartho/prom
 
 [Tokenizer](https://huggingface.co/daspartho/prompt-tokenizer) and [Model](https://huggingface.co/daspartho/prompt-extend) on HuggingFace Hub.
 
+# Usage
+
+```python
+from transformers import pipeline
+
+text_pipe = pipeline('text-generation', model='daspartho/prompt-extend')
+
+prompt = "peaceful village landscape"
+extended_prompt = text_pipe(prompt, num_return_sequences=1)[0]["generated_text"]
+print(extended_prompt)
+```
+
+```python
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+tokenizer = AutoTokenizer.from_pretrained("daspartho/prompt-extend")
+
+model = AutoModelForCausalLM.from_pretrained("daspartho/prompt-extend")
+```
+
 # Code
 - [dataset.ipynb](https://github.com/daspartho/prompt-extend/blob/main/dataset.ipynb): Creating a [subset dataset](https://huggingface.co/datasets/daspartho/stable-diffusion-prompts) of [diffusiondb](https://huggingface.co/datasets/poloclub/diffusiondb) consisting of just unique prompts.
 - [tokenizer.ipynb](https://github.com/daspartho/prompt-extend/blob/main/tokenizer.ipynb): Training a new tokenizer on the [dataset](https://huggingface.co/datasets/daspartho/stable-diffusion-prompts) of stable diffusion prompts.
